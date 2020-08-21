@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="12G-YJ-otb">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chat-->
+        <scene sceneID="dZV-c1-cPD">
+            <objects>
+                <viewController id="12G-YJ-otb" customClass="ChatController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xle-1N-Fso">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="THn-4e-jHV">
+                                <rect key="frame" x="0.0" y="44" width="414" height="719"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="12G-YJ-otb" id="ukB-0V-nva"/>
+                                    <outlet property="delegate" destination="12G-YJ-otb" id="lGJ-t0-j73"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="thq-hV-AiW">
+                                <rect key="frame" x="0.0" y="763" width="414" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8MD-Ae-TR2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eb2-Cf-9ca" firstAttribute="trailing" secondItem="thq-hV-AiW" secondAttribute="trailing" id="EcC-uS-Nqw"/>
+                            <constraint firstItem="eb2-Cf-9ca" firstAttribute="trailing" secondItem="THn-4e-jHV" secondAttribute="trailing" id="S9j-wQ-ojp"/>
+                            <constraint firstItem="thq-hV-AiW" firstAttribute="top" secondItem="THn-4e-jHV" secondAttribute="bottom" id="i98-45-2n4"/>
+                            <constraint firstItem="thq-hV-AiW" firstAttribute="bottom" secondItem="eb2-Cf-9ca" secondAttribute="bottom" id="lQB-WE-kFY"/>
+                            <constraint firstItem="thq-hV-AiW" firstAttribute="leading" secondItem="eb2-Cf-9ca" secondAttribute="leading" id="mzz-hB-bET"/>
+                            <constraint firstItem="THn-4e-jHV" firstAttribute="leading" secondItem="eb2-Cf-9ca" secondAttribute="leading" id="oUU-hP-bhK"/>
+                            <constraint firstItem="THn-4e-jHV" firstAttribute="top" secondItem="eb2-Cf-9ca" secondAttribute="top" id="pcX-ST-QTf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eb2-Cf-9ca"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Chat" image="tab_chat" id="28F-4K-Qr9"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="THn-4e-jHV" id="Ne4-Z5-moB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fAh-jB-JOJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="518.84057971014499" y="154.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab_chat" width="30" height="30"/>
+    </resources>
+</document>

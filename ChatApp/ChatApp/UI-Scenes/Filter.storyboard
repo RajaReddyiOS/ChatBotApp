@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q8X-iT-zcR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Filter-->
+        <scene sceneID="fIV-PZ-Lwd">
+            <objects>
+                <viewController id="q8X-iT-zcR" customClass="FilterController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i6c-bw-qYR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zy8-XZ-R2K">
+                                <rect key="frame" x="0.0" y="100" width="414" height="713"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="q8X-iT-zcR" id="D2X-tb-tBI"/>
+                                    <outlet property="delegate" destination="q8X-iT-zcR" id="cEV-TF-cr3"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7E-9s-4lc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <color key="barTintColor" red="0.93725490196078431" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="q8X-iT-zcR" id="bWT-M9-aBe"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2u6-gV-xlW" firstAttribute="bottom" secondItem="Zy8-XZ-R2K" secondAttribute="bottom" id="0dH-QV-mYy"/>
+                            <constraint firstItem="M7E-9s-4lc" firstAttribute="leading" secondItem="2u6-gV-xlW" secondAttribute="leading" id="K93-oK-HjF"/>
+                            <constraint firstItem="Zy8-XZ-R2K" firstAttribute="top" secondItem="M7E-9s-4lc" secondAttribute="bottom" id="LJW-3Z-XPc"/>
+                            <constraint firstItem="2u6-gV-xlW" firstAttribute="trailing" secondItem="Zy8-XZ-R2K" secondAttribute="trailing" id="cia-6A-V4X"/>
+                            <constraint firstItem="M7E-9s-4lc" firstAttribute="trailing" secondItem="2u6-gV-xlW" secondAttribute="trailing" id="f9d-Ry-iXx"/>
+                            <constraint firstItem="M7E-9s-4lc" firstAttribute="top" secondItem="2u6-gV-xlW" secondAttribute="top" id="iBl-wn-IHD"/>
+                            <constraint firstItem="Zy8-XZ-R2K" firstAttribute="leading" secondItem="2u6-gV-xlW" secondAttribute="leading" id="zzK-PI-LnP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2u6-gV-xlW"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Filter" image="tab_filter" id="C3p-sh-Y6B"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="searchBar" destination="M7E-9s-4lc" id="Hd4-0d-aLJ"/>
+                        <outlet property="tableView" destination="Zy8-XZ-R2K" id="Lc1-as-ibp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YXp-b0-x2W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab_filter" width="30" height="30"/>
+    </resources>
+</document>
