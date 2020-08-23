@@ -26,5 +26,4 @@ class ProfileVM {
         guard let email = getLoggedInEmail() else { return nil }
         return RealmUtils.getObject(ProfileDetails.self, primaryKey: email)
     }
-    
 }

@@ -24,7 +24,7 @@ class TabController: UITabBarController, UITabBarControllerDelegate {
     @IBAction func logoutBtnHandler(_ sender: Any) {
         UserDefaultsHelper.save("", for: UserDefaultsHelper.Keys.loggedInEmail)
         let sb = UIStoryboard(name: "SignIn", bundle: nil)
-        self.navigationController?.present(sb.instantiateInitialViewController()!, animated: false, completion: nil)
+        self.navigationController?.presentFullScreen(sb.instantiateInitialViewController()!)
     }
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {

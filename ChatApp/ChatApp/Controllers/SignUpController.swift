@@ -52,11 +52,16 @@ class SignUpController: UIViewController {
             let alert = showProgressAlert("Creating User ...")
             let userId = "\(ProfileVM.getAll().count+1)"
             RealmUtils.save(ProfileDetails(tfEmail.text!, password: tfPassword.text!, phoneNumber: tfPhoneNumber.text!, name: tfName.text!, userId: userId))
-            DataUploader.writeCompaniesData {
-                DataUploader.writeTransactionsData(userId) {
-                    DispatchQueue.main.async {
-                        alert.dismiss(animated: true) {
-                            self.navigationController?.popViewController(animated: false)
+            
+            DispatchQueue.global(qos: DispatchQoS.QoSClass.background).async {
+                DataUploader.writeBotPredefinedMessage {
+                    DataUploader.writeCompaniesData {
+                        DataUploader.writeTransactionsData(userId) {
+                            DispatchQueue.main.async {
+                                alert.dismiss(animated: true) {
+                                    self.navigationController?.popViewController(animated: false)
+                                }
+                            }
                         }
                     }
                 }

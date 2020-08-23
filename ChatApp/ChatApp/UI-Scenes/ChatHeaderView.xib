@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatHeaderView" customModule="ChatApp" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="iN0-l3-epB" id="EmY-wc-7pt"/>
+                <outlet property="lblDate" destination="r7L-8q-RxJ" id="9EZ-e2-L1j"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XMg-FC-jtd">
+                    <rect key="frame" x="20" y="19.5" width="374" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Z3h-3G-YVM"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 Dec 2020" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7L-8q-RxJ">
+                    <rect key="frame" x="157" y="10" width="100" height="20"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="r0K-E7-OG3"/>
+                        <constraint firstAttribute="width" constant="100" id="uZm-b3-zWW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="r7L-8q-RxJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FZM-IJ-MIV"/>
+                <constraint firstAttribute="trailing" secondItem="XMg-FC-jtd" secondAttribute="trailing" constant="20" id="JlT-cR-aUt"/>
+                <constraint firstItem="XMg-FC-jtd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="TIN-Ui-V0X"/>
+                <constraint firstItem="XMg-FC-jtd" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="qi0-60-NoB"/>
+                <constraint firstItem="r7L-8q-RxJ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="tmg-FS-65F"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="139" y="84"/>
+        </view>
+    </objects>
+</document>

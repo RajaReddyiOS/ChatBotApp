@@ -28,7 +28,5 @@ class ProfileDetails: Object {
     
     public override static func primaryKey() -> String {
         return "emailId"
-    }
-    
-    
+    }    
 }

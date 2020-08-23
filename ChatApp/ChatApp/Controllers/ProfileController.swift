@@ -48,6 +48,5 @@ class ProfileController: UIViewController, UITableViewDelegate, UITableViewDataS
         cell.transaction = transactions[indexPath.row]
         return cell
     }
-
 }
 

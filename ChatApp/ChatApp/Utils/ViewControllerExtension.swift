@@ -34,6 +34,11 @@ extension UIViewController {
         (self.navigationController ?? self).present(alert, animated: true)
         return alert
     }
+    
+    func presentFullScreen(_ destinationVC: UIViewController, animated: Bool = false, completion: (() -> Void)? = nil) {
+        destinationVC.modalPresentationStyle = .fullScreen
+        self.present(destinationVC, animated: animated, completion: completion)
+    }
 }
 
 

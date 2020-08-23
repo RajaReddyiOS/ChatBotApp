@@ -24,4 +24,7 @@ class Chat: Object {
         self.type = type
     }
     
+    public override static func primaryKey() -> String {
+        return "timestamp"
+    }
 }

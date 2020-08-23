@@ -40,7 +40,7 @@ class SignInController: UIViewController {
                 if profileDetails!.password == tfPassword.text {
                     UserDefaultsHelper.save(tfEmail.text!, for: UserDefaultsHelper.Keys.loggedInEmail)
                     let sb = UIStoryboard(name: "Main", bundle: nil)
-                    self.present(sb.instantiateInitialViewController()!, animated: false, completion: nil)
+                    self.navigationController?.presentFullScreen(sb.instantiateInitialViewController()!)
                 }else {
                     showAlert(message: "Invalid password")
                 }

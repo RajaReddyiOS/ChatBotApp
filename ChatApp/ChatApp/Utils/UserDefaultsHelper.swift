@@ -19,9 +19,7 @@ class UserDefaultsHelper {
         static let loggedInEmail = "loggedInEmail"
     }
     
-    
     public static func get<T>(_ type: T.Type, key: String) -> T? {
         return UserDefaults.standard.value(forKey: key) as? T
     }
-    
 }

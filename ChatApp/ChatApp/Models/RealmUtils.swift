@@ -60,4 +60,22 @@ class RealmUtils {
         }
         return []
     }
+    
+    public static func toList<T: Any>(_ type: T.Type, data: [T]) -> List<T> {
+        let list = List<T>()
+        data.forEach { (each) in
+            list.append(each)
+        }
+        return list
+    }
+    
+    public static func getObjects<Element: Object>(_ type: Element.Type, filter: String) -> [Element]  {
+        do {
+            let realm = try Realm()
+            return Array(realm.objects(type).filter(filter))
+        } catch let error {
+            print(TAG+": Non-Fatal Exception at \(#function) of type: \(String(describing: Element.self)): \(String(describing: error))")
+        }
+        return []
+    }
 }

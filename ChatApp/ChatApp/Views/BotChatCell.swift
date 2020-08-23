@@ -16,13 +16,14 @@ class BotChatCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        transform = CGAffineTransform(scaleX: 1, y: -1)
     }
     
     var chat: Chat? {
         didSet {
             guard let chatMessage = chat else {return}
             lblMessage.text = chatMessage.message
+            lblTime.text = Date(timeIntervalSince1970: TimeInterval(chatMessage.timestamp)).getTime()
         }
     }
-    
 }

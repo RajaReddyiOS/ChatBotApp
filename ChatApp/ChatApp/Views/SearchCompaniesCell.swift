@@ -30,5 +30,4 @@ class SearchCompaniesCell: UITableViewCell {
             lblName.text = name
         }
     }
-    
 }

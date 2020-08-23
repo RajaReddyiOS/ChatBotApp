@@ -39,7 +39,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="w78-dG-uTU">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" backgroundImage="nil" shadowImage="transparentShadow" id="w78-dG-uTU">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -88,5 +88,6 @@
     </scenes>
     <resources>
         <image name="nil" width="16" height="16"/>
+        <image name="transparentShadow" width="16" height="16"/>
     </resources>
 </document>

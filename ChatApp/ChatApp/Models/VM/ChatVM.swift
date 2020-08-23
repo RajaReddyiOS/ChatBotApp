@@ -15,18 +15,20 @@ class ChatVM {
         return RealmUtils.getObjects(Chat.self, predicate: NSPredicate(format: "userId = %@", profileDetails.userId))
     }
     
-    static func getMyChats() -> [Date: [Chat]] {
-        var hashMap = [Date: [Chat]]()
+    static func getMyChats() -> [String: [Chat]] {
+        var hashMap = [String: [Chat]]()
         
         getMyChatHistory().sorted { (o1, o2) -> Bool in
             return o1.timestamp < o2.timestamp
         }.forEach { (chat) in
-            let date = Date(timeIntervalSince1970: TimeInterval(chat.timestamp))//.getDate()
+            let date = Date(timeIntervalSince1970: TimeInterval(chat.timestamp)).getDate()
             var list = hashMap[date] ?? []
             list.append(chat)
+            list.sort { (c1, c2) -> Bool in
+                return c1.timestamp > c2.timestamp
+            }
             hashMap[date] = list
         }
         return hashMap
     }
-    
 }

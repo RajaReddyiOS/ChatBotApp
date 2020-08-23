@@ -34,5 +34,4 @@ class TransactionCell: UITableViewCell {
             lblDate.text = Date(timeIntervalSince1970: TimeInterval(transaction.time)).getDay()
         }
     }
-    
 }

@@ -40,7 +40,6 @@
 		ECCA6D6A24EE54560001D471 /* TransactionsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA6D6924EE54560001D471 /* TransactionsVM.swift */; };
 		ECCA6D6C24EE54860001D471 /* ProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA6D6B24EE54860001D471 /* ProfileVM.swift */; };
 		ECCA6D6E24EE54C60001D471 /* ProfileDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA6D6D24EE54C60001D471 /* ProfileDetails.swift */; };
-		ECCA6D7024EE58330001D471 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA6D6F24EE58330001D471 /* Utils.swift */; };
 		ECCA6D7324EE5EB90001D471 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA6D7124EE5EB90001D471 /* TransactionCell.swift */; };
 		ECCA6D7424EE5EB90001D471 /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECCA6D7224EE5EB90001D471 /* TransactionCell.xib */; };
 		ECCA6D7624EE683A0001D471 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECCA6D7524EE683A0001D471 /* SignUp.storyboard */; };
@@ -51,6 +50,10 @@
 		ECCA6D8024EE8F230001D471 /* BotChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECCA6D7E24EE8F230001D471 /* BotChatCell.xib */; };
 		ECCA6D8224EE915F0001D471 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA6D8124EE915F0001D471 /* Chat.swift */; };
 		ECCA6D8424EE929E0001D471 /* ChatVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA6D8324EE929E0001D471 /* ChatVM.swift */; };
+		ECF89E4F24F279F100652F01 /* ChatBotResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF89E4E24F279F100652F01 /* ChatBotResponse.swift */; };
+		ECF89E5124F27AE900652F01 /* ChatBotResponseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF89E5024F27AE900652F01 /* ChatBotResponseVM.swift */; };
+		ECF89E5324F28E4E00652F01 /* ChatHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF89E5224F28E4E00652F01 /* ChatHeaderView.swift */; };
+		ECF89E5524F28E5D00652F01 /* ChatHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECF89E5424F28E5D00652F01 /* ChatHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,7 +117,6 @@
 		ECCA6D6924EE54560001D471 /* TransactionsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsVM.swift; sourceTree = "<group>"; };
 		ECCA6D6B24EE54860001D471 /* ProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVM.swift; sourceTree = "<group>"; };
 		ECCA6D6D24EE54C60001D471 /* ProfileDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetails.swift; sourceTree = "<group>"; };
-		ECCA6D6F24EE58330001D471 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		ECCA6D7124EE5EB90001D471 /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		ECCA6D7224EE5EB90001D471 /* TransactionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionCell.xib; sourceTree = "<group>"; };
 		ECCA6D7524EE683A0001D471 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
@@ -125,6 +127,10 @@
 		ECCA6D7E24EE8F230001D471 /* BotChatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BotChatCell.xib; sourceTree = "<group>"; };
 		ECCA6D8124EE915F0001D471 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		ECCA6D8324EE929E0001D471 /* ChatVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVM.swift; sourceTree = "<group>"; };
+		ECF89E4E24F279F100652F01 /* ChatBotResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotResponse.swift; sourceTree = "<group>"; };
+		ECF89E5024F27AE900652F01 /* ChatBotResponseVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotResponseVM.swift; sourceTree = "<group>"; };
+		ECF89E5224F28E4E00652F01 /* ChatHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeaderView.swift; sourceTree = "<group>"; };
+		ECF89E5424F28E5D00652F01 /* ChatHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatHeaderView.xib; sourceTree = "<group>"; };
 		F8429507CB2E7CCACA94AD55 /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 		FE2CC839D1FA601219E7BCCF /* Pods-ChatApp-ChatAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp-ChatAppUITests.release.xcconfig"; path = "Target Support Files/Pods-ChatApp-ChatAppUITests/Pods-ChatApp-ChatAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -244,7 +250,6 @@
 				EC96935E24EBDBC10077322A /* Extensions.swift */,
 				EC96936024EBDCE80077322A /* ViewControllerExtension.swift */,
 				ECCA6D6724ED7CCC0001D471 /* DataUploader.swift */,
-				ECCA6D6F24EE58330001D471 /* Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 				ECCA6D7524EE683A0001D471 /* SignUp.storyboard */,
 				ECCA6D7A24EE8F0C0001D471 /* UserChatCell.xib */,
 				ECCA6D7E24EE8F230001D471 /* BotChatCell.xib */,
+				ECF89E5424F28E5D00652F01 /* ChatHeaderView.xib */,
 			);
 			path = "UI-Scenes";
 			sourceTree = "<group>";
@@ -287,6 +293,7 @@
 				ECCA6D7924EE8F0C0001D471 /* UserChatCell.swift */,
 				ECCA6D7124EE5EB90001D471 /* TransactionCell.swift */,
 				ECCA6D7D24EE8F230001D471 /* BotChatCell.swift */,
+				ECF89E5224F28E4E00652F01 /* ChatHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -298,6 +305,7 @@
 				ECCA6D6324ED28E20001D471 /* Transaction.swift */,
 				ECCA6D6D24EE54C60001D471 /* ProfileDetails.swift */,
 				ECCA6D8124EE915F0001D471 /* Chat.swift */,
+				ECF89E4E24F279F100652F01 /* ChatBotResponse.swift */,
 				ECCA6D5E24ECE6410001D471 /* VM */,
 				ECCA6D6524ED7B090001D471 /* RealmUtils.swift */,
 			);
@@ -311,6 +319,7 @@
 				ECCA6D6924EE54560001D471 /* TransactionsVM.swift */,
 				ECCA6D6B24EE54860001D471 /* ProfileVM.swift */,
 				ECCA6D8324EE929E0001D471 /* ChatVM.swift */,
+				ECF89E5024F27AE900652F01 /* ChatBotResponseVM.swift */,
 			);
 			path = VM;
 			sourceTree = "<group>";
@@ -428,6 +437,7 @@
 				ECCA6D8024EE8F230001D471 /* BotChatCell.xib in Resources */,
 				EC96935224EBCADF0077322A /* Filter.storyboard in Resources */,
 				ECCA6D7424EE5EB90001D471 /* TransactionCell.xib in Resources */,
+				ECF89E5524F28E5D00652F01 /* ChatHeaderView.xib in Resources */,
 				EC96932424EBC1940077322A /* LaunchScreen.storyboard in Resources */,
 				ECCA6D7624EE683A0001D471 /* SignUp.storyboard in Resources */,
 				EC96932124EBC1940077322A /* Assets.xcassets in Resources */,
@@ -570,12 +580,14 @@
 				EC96934924EBC3840077322A /* UserDefaultsHelper.swift in Sources */,
 				EC96935524EBCD0A0077322A /* FilterController.swift in Sources */,
 				EC96935D24EBDA750077322A /* DesignableHelper.swift in Sources */,
-				ECCA6D7024EE58330001D471 /* Utils.swift in Sources */,
+				ECF89E5124F27AE900652F01 /* ChatBotResponseVM.swift in Sources */,
+				ECF89E4F24F279F100652F01 /* ChatBotResponse.swift in Sources */,
 				ECCA6D6E24EE54C60001D471 /* ProfileDetails.swift in Sources */,
 				EC96936424EBF1350077322A /* SearchCompaniesCell.swift in Sources */,
 				EC96935F24EBDBC10077322A /* Extensions.swift in Sources */,
 				EC96931524EBC1900077322A /* AppDelegate.swift in Sources */,
 				ECCA6D7824EE6A180001D471 /* SignUpController.swift in Sources */,
+				ECF89E5324F28E4E00652F01 /* ChatHeaderView.swift in Sources */,
 				ECCA6D8224EE915F0001D471 /* Chat.swift in Sources */,
 				ECCA6D7324EE5EB90001D471 /* TransactionCell.swift in Sources */,
 				ECCA6D7F24EE8F230001D471 /* BotChatCell.swift in Sources */,

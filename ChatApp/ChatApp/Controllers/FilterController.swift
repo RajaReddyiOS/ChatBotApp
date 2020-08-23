@@ -47,33 +47,12 @@ class FilterController: UIViewController, UITableViewDelegate, UITableViewDataSo
 
 //    MARK: - Searchbar delegate
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("searching for companies \(searchText)")
         timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(timerHandler(_:)), userInfo: searchText, repeats: false)
     }
     
     @objc
     fileprivate func timerHandler(_ sender: Timer) {
-        
-//        companies.starts(with: <#T##Sequence#>) { (<#Company#>, <#Sequence.Element#>) -> Bool in
-//            <#code#>
-//        }
-        
-//        guard let searchQuery = sender.userInfo as? String else {return}
-//        
-//        companies.sort { (o1, o2) -> Bool in
-//            return o1.name.starts(with: searchQuery) || o2.name.starts(with: searchQuery)
-//        }
-        
-        
-//        filteredList = companies
-//
-//        if !searchQuery.isBlank {
-//            filteredList = filteredList.filter { (company) -> Bool in
-//                return company.name.contains(searchQuery)
-//            }
-//        }
         tableView.reloadData()
     }
-
 }
 

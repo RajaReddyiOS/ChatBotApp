@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="12G-YJ-otb">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="12G-YJ-otb" customClass="ChatController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xle-1N-Fso">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="THn-4e-jHV">
-                                <rect key="frame" x="0.0" y="44" width="414" height="719"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="THn-4e-jHV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="469"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="12G-YJ-otb" id="ukB-0V-nva"/>
@@ -25,37 +25,94 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="thq-hV-AiW">
-                                <rect key="frame" x="0.0" y="763" width="414" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="469" width="320" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RE4-tN-o1K">
+                                        <rect key="frame" x="8" y="8" width="258" height="34"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type a Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wlr-oP-Lpv">
+                                                <rect key="frame" x="8" y="0.0" width="242" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Wlr-oP-Lpv" secondAttribute="trailing" constant="8" id="F0p-20-0Vu"/>
+                                            <constraint firstAttribute="bottom" secondItem="Wlr-oP-Lpv" secondAttribute="bottom" id="PLx-GA-PI5"/>
+                                            <constraint firstItem="Wlr-oP-Lpv" firstAttribute="top" secondItem="RE4-tN-o1K" secondAttribute="top" id="jhl-4X-Pdc"/>
+                                            <constraint firstItem="Wlr-oP-Lpv" firstAttribute="leading" secondItem="RE4-tN-o1K" secondAttribute="leading" constant="8" id="wI9-Vz-azD"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="17"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lF-PY-ooe">
+                                        <rect key="frame" x="266" y="0.0" width="54" height="50"/>
+                                        <inset key="contentEdgeInsets" minX="12" minY="0.0" maxX="12" maxY="0.0"/>
+                                        <state key="normal" image="chat_send_icon"/>
+                                        <connections>
+                                            <action selector="sendBtnhandler:" destination="12G-YJ-otb" eventType="touchUpInside" id="H6g-d0-o97"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="8MD-Ae-TR2"/>
+                                    <constraint firstItem="RE4-tN-o1K" firstAttribute="top" secondItem="thq-hV-AiW" secondAttribute="top" constant="8" id="AbZ-hL-s0n"/>
+                                    <constraint firstAttribute="bottom" secondItem="RE4-tN-o1K" secondAttribute="bottom" constant="8" id="CH8-R8-6kR"/>
+                                    <constraint firstAttribute="bottom" secondItem="6lF-PY-ooe" secondAttribute="bottom" id="EOC-Bq-N6l"/>
+                                    <constraint firstAttribute="trailing" secondItem="6lF-PY-ooe" secondAttribute="trailing" id="Sp2-cD-kK5"/>
+                                    <constraint firstAttribute="height" constant="50" id="UJi-en-x2v"/>
+                                    <constraint firstItem="6lF-PY-ooe" firstAttribute="top" secondItem="thq-hV-AiW" secondAttribute="top" id="l2Z-PI-IIf"/>
+                                    <constraint firstItem="RE4-tN-o1K" firstAttribute="leading" secondItem="thq-hV-AiW" secondAttribute="leading" constant="8" id="qqw-a4-Is6"/>
+                                    <constraint firstItem="6lF-PY-ooe" firstAttribute="leading" secondItem="RE4-tN-o1K" secondAttribute="trailing" id="uoB-Zz-TCg"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Dev Chat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQE-Bh-nfY">
+                                <rect key="frame" x="8" y="276" width="304" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="jQE-Bh-nfY" firstAttribute="centerY" secondItem="Xle-1N-Fso" secondAttribute="centerY" id="CEU-dA-JtK"/>
                             <constraint firstItem="eb2-Cf-9ca" firstAttribute="trailing" secondItem="thq-hV-AiW" secondAttribute="trailing" id="EcC-uS-Nqw"/>
                             <constraint firstItem="eb2-Cf-9ca" firstAttribute="trailing" secondItem="THn-4e-jHV" secondAttribute="trailing" id="S9j-wQ-ojp"/>
+                            <constraint firstItem="jQE-Bh-nfY" firstAttribute="leading" secondItem="eb2-Cf-9ca" secondAttribute="leading" constant="8" id="SKx-65-owH"/>
                             <constraint firstItem="thq-hV-AiW" firstAttribute="top" secondItem="THn-4e-jHV" secondAttribute="bottom" id="i98-45-2n4"/>
                             <constraint firstItem="thq-hV-AiW" firstAttribute="bottom" secondItem="eb2-Cf-9ca" secondAttribute="bottom" id="lQB-WE-kFY"/>
                             <constraint firstItem="thq-hV-AiW" firstAttribute="leading" secondItem="eb2-Cf-9ca" secondAttribute="leading" id="mzz-hB-bET"/>
                             <constraint firstItem="THn-4e-jHV" firstAttribute="leading" secondItem="eb2-Cf-9ca" secondAttribute="leading" id="oUU-hP-bhK"/>
                             <constraint firstItem="THn-4e-jHV" firstAttribute="top" secondItem="eb2-Cf-9ca" secondAttribute="top" id="pcX-ST-QTf"/>
+                            <constraint firstItem="eb2-Cf-9ca" firstAttribute="trailing" secondItem="jQE-Bh-nfY" secondAttribute="trailing" constant="8" id="qiq-ZO-GAP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eb2-Cf-9ca"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Chat" image="tab_chat" id="28F-4K-Qr9"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="lblWelcomeNote" destination="jQE-Bh-nfY" id="tp8-i3-xxh"/>
                         <outlet property="tableView" destination="THn-4e-jHV" id="Ne4-Z5-moB"/>
+                        <outlet property="tfMessage" destination="Wlr-oP-Lpv" id="xv7-v4-4IS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fAh-jB-JOJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="518.84057971014499" y="154.6875"/>
+            <point key="canvasLocation" x="517.5" y="154.22535211267606"/>
         </scene>
     </scenes>
     <resources>
+        <image name="chat_send_icon" width="30" height="30"/>
         <image name="tab_chat" width="30" height="30"/>
     </resources>
 </document>

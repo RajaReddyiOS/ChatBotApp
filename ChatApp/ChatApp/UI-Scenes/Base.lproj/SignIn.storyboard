@@ -22,7 +22,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Id" textAlignment="natural" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="BsJ-UU-rzw">
                                         <rect key="frame" x="12" y="0.0" width="310" height="44.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5FS-RY-tIB">
                                         <rect key="frame" x="0.0" y="44.5" width="334" height="1"/>
@@ -34,7 +34,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="xa0-ut-Cco">
                                         <rect key="frame" x="12" y="45.5" width="310" height="44.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -68,8 +68,8 @@
                                 <rect key="frame" x="157" y="489" width="100" height="36"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="b1A-AJ-jP0"/>
                                     <constraint firstAttribute="height" constant="36" id="gth-LE-ntg"/>
-                                    <constraint firstAttribute="width" constant="100" id="oIR-Vk-GLI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="Login">

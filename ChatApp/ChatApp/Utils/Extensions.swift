@@ -63,7 +63,13 @@ extension Date {
     
     func getDate() -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd MM yyyy"
+        formatter.dateFormat = "dd MMM yyyy"
+        return formatter.string(from: self)
+    }
+    
+    func getTime() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
         return formatter.string(from: self)
     }
 }
@@ -80,6 +86,14 @@ extension UIView {
         self.layer.cornerRadius = cornerRadius
         self.layer.borderWidth = borderWidth
         self.layer.borderColor = borderColor.cgColor
+    }
+    
+    /** Loads instance from nib with the same name. */
+    func loadNib() -> UIView {
+        let bundle = Bundle(for: type(of: self))
+        let nibName = type(of: self).description().components(separatedBy: ".").last!
+        let nib = UINib(nibName: nibName, bundle: bundle)
+        return nib.instantiate(withOwner: self, options: nil).first as! UIView
     }
     
 }
